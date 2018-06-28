@@ -1,9 +1,13 @@
 (function() {
 
-    var note = Note;
-    note.setText("My favourite language is JavaScript");
+    var note1 = Note();
+    var note2 = Note();
 
-    assert.isTrue(note.getText() === "<p>My favourite language is JavaScript</p>");
+    note1.setText("test_01");
+    note2.setText("test_02")
+
+    assert.isTrue(note1.getText() === "<p>test_01</p>");
+    assert.isTrue(note2.getText() === "<p>test_02</p>");
 
 })();
 

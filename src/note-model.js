@@ -17,9 +17,9 @@
 
         return {
                 setText : setText,
-                getText : getText
+                getText : getText,
         };
-    })(); 
+    }); 
 
     if(!win.Note) win.Note = Note;
 })(window, document,jQuery);
