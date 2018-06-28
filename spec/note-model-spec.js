@@ -4,7 +4,7 @@
     var note2 = Note();
 
     note1.setText("test_01");
-    note2.setText("test_02")
+    note2.setText("test_02");
 
     assert.isTrue(note1.getText() === "<p>test_01</p>");
     assert.isTrue(note2.getText() === "<p>test_02</p>");
