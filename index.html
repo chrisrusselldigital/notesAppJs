@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-  div.border{
-    border-style:ridge;
-  }
-  </style>
+  <style>div.border{ border-style:ridge; }</style>
+
+  <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+
 </head>
 
-  <body>
+<body>
     <h1>Notes App</h1>
-   <textarea rows="4" cols="50">
-At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
-</textarea>
+    <textarea id="text" rows="4" cols="50">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
 <p></p>
-<button type="submit">Submit</button>
-<div id="noteslist" class="border"> </div>
-  </body>
 
-  </html>
+<button id="btn" type="submit">Submit</button>
+<div id="noteslist" class="border"> </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button#btn").on("click", function(){
+            $("div#noteslist").append("<p>" + $("textarea#text").val() + "</p>");
+        });
+    });
+</script>
+
+</body>
+</html>
