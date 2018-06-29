@@ -1,39 +1,39 @@
-(function(win, doc,$){
-    var Note= (function(){
-            var _text;
+// (function(win, doc,$){ //what happens if we do not use JQuery?
+//     var Note= (function(){
+//             var _text;
+//
+//             function _makeTag(msg){
+//                 _text= "<p>" + msg + "</p>";
+//             };
+//
+//
+//         function setText(msg){
+//             _makeTag(msg);
+//         };
+//
+//         function getText(){
+//             return _text;
+//         };
+//
+//         return {
+//                 setText : setText,
+//                 getText : getText,
+//         };
+//     });
+//
+//     if(!win.Note) win.Note = Note;
+// })(window, document,jQuery);
 
-            function _makeTag(msg){
-                _text= "<p>" + msg + "</p>";
-            };
 
 
-        function setText(msg){
-            _makeTag(msg);
-        };
+(function(exports, $) {
+  function Note(txt) {
+    this.text = txt;
+  };
 
-        function getText(){
-            return _text;
-        };
+  Note.prototype.Text = function () {
+    return this.text;
+  };
 
-        return {
-                setText : setText,
-                getText : getText,
-        };
-    }); 
-
-    if(!win.Note) win.Note = Note;
-})(window, document,jQuery);
-
-
-
-// (function(exports) {
-//   function Note(txt) {
-//     this.text = txt;
-//   };
-
-//   Note.prototype.Text = function () {
-//     return this.text;
-//   };
-
-//   exports.Note = Note;
-// })(this);
+  exports.Note = Note;
+})(this, jQuery);
